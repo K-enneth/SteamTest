@@ -1339,7 +1339,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1426007406}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1534125785}
+        m_TargetAssemblyTypeName: SteamLobbyTutorial.LobbyUIManager, Assembly-CSharp
+        m_MethodName: OnPlayButtonClicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1426007406
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1872,7 +1884,8 @@ MonoBehaviour:
   playerPrefab: {fileID: 7129007842389867197, guid: 8a447dfa0abfbd54b960255ee899d8c5, type: 3}
   autoCreatePlayer: 1
   playerSpawnMethod: 0
-  spawnPrefabs: []
+  spawnPrefabs:
+  - {fileID: 737270081878802746, guid: bbc1297f36690ac4eadbde2b6757b117, type: 3}
   exceptionsDisconnect: 1
   snapshotSettings:
     bufferTimeMultiplier: 2
@@ -1888,6 +1901,7 @@ MonoBehaviour:
   evaluationMethod: 0
   evaluationInterval: 3
   timeInterpolationGui: 0
+  playerGameplayPrefab: {fileID: 737270081878802746, guid: bbc1297f36690ac4eadbde2b6757b117, type: 3}
 --- !u!114 &2074296147
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1895,7 +1909,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2074296143}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
   m_Name: 
@@ -1929,9 +1943,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efc578f191b897b44934cda1c90b2a9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  syncDirection: 0
-  syncMode: 0
-  syncInterval: 0
   hostButton: {fileID: 1901721448}
   lobbyID: 0
   networkManager: {fileID: 2074296146}

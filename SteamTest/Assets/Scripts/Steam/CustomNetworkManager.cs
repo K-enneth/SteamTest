@@ -13,6 +13,7 @@ public class CustomNetworkManager : NetworkManager
     // Overrides the base singleton so we don't
     // have to cast to this type everywhere.
     public static new CustomNetworkManager singleton => (CustomNetworkManager)NetworkManager.singleton;
+    public GameObject playerGameplayPrefab;
 
     /// <summary>
     /// Runs on both Server and Client
@@ -87,6 +88,11 @@ public class CustomNetworkManager : NetworkManager
     /// <param name="newSceneName"></param>
     public override void ServerChangeScene(string newSceneName)
     {
+        if (newSceneName == "GameplayScene")
+        {
+            this.playerPrefab = playerGameplayPrefab;
+            this.onlineScene = newSceneName;
+        }
         base.ServerChangeScene(newSceneName);
     }
 
